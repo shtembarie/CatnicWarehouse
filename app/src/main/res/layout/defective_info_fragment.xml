@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:background="@drawable/rounded_grey" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/header_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/defective_icon_new" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/type_of_delivery"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/defectiveDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.09"
+        android:lineSpacingExtra="1.3sp"
+        android:paddingVertical="12dp"
+        android:text="@string/defective_info_desc"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/buttonBack"
+        style="@style/TransparentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:text="@string/back"
+        android:textAllCaps="true" />
+
+</LinearLayout>

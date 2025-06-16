@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inventory_view_navigation"
+    app:startDestination="@id/inventoryFragment">
+
+
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.example.catnicwarehouse.Inventory.stockyards.presentation.fragment.InventoryFragment"
+        android:label="inventory_fragments"
+        tools:layout="@layout/fragment_inventory">
+        <action
+            android:id="@+id/action_inventoryFragment_to_inventoryItemsFragment"
+            app:destination="@id/inventoryItemsFragment">
+            <argument
+                android:name="stockyardId"
+                app:argType="integer" />
+            <argument
+                android:name="inventoryItems"
+                app:argType="com.example.shared.repository.inventory.model.InventoryItem[]" />
+            <argument
+                android:name="stockyardName"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_inventoryFragment_to_stockyardTreeFragment4"
+            app:destination="@id/stockyardTreeFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryItemsFragment"
+        android:name="com.example.catnicwarehouse.Inventory.stockyardsItems.presentation.fragment.InventoryItemsFragment"
+        android:label="fragment_inventory_items"
+        tools:layout="@layout/fragment_inventory_items">
+
+        <argument
+            android:name="inventoryId"
+            app:argType="integer" />
+
+        <argument
+            android:name="stockyardId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_inventoryItemsFragment_to_inventoryArticleDescriptionFragment"
+            app:destination="@id/inventoryArticleDescriptionFragment" />
+        <action
+            android:id="@+id/action_inventoryItemsFragment_to_inventoryFragment"
+            app:destination="@id/inventoryFragment" />
+        <action
+            android:id="@+id/action_inventoryItemsFragment_to_stockyardTreeFragment4"
+            app:destination="@id/stockyardTreeFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryArticleDescriptionFragment"
+        android:name="com.example.catnicwarehouse.Inventory.stockyardMatchFound.presentation.fragment.MatchFoundInventoryItemFragment"
+        android:label="fragment_inventory_article_description"
+        tools:layout="@layout/fragment_inventory_article_description">
+
+        <argument
+            android:name="inventoryArticle"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_inventoryArticleDescriptionFragment_to_commentFragmentInventors"
+            app:destination="@id/commentFragmentInventors" />
+        <action
+            android:id="@+id/action_inventoryArticleDescriptionFragment_to_amountItemInventoryFragment"
+            app:destination="@id/amountItemInventoryFragment" />
+        <action
+            android:id="@+id/action_inventoryArticleDescriptionFragment_to_inventoryItemsFragment"
+            app:destination="@id/inventoryItemsFragment" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+        <argument
+            android:name="comment"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="matchCode"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="articleId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="articleDescription"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="unitCode"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/commentFragmentInventors"
+        android:name="com.example.catnicwarehouse.Inventory.comment.CommentFragmentInventors"
+        android:label="fragment_comment_inventors"
+        tools:layout="@layout/fragment_comment_inventors" />
+    <fragment
+        android:id="@+id/amountItemInventoryFragment"
+        android:name="com.example.catnicwarehouse.Inventory.ArticleAmount.presentation.AmountItemInventoryFragment"
+        android:label="fragment_amount_item_inventory"
+        tools:layout="@layout/fragment_amount_item_inventory" />
+    <fragment
+        android:id="@+id/scanDeviceInstructionsFragment"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.ScanDeviceInstructionsFragment"
+        android:label="fragment_scan_device_instructions"
+        tools:layout="@layout/scan_device_info_layout">
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockyardTreeFragment4"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.StockyardTreeFragment"
+        android:label="fragment_stockyard_tree"
+        tools:layout="@layout/fragment_stockyard_tree">
+        <argument
+            android:name="selectedStockyardId"
+            android:defaultValue="0"
+            app:argType="string" />
+
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+
+        <argument
+            android:name="moduleType"
+            android:defaultValue="Inventory"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

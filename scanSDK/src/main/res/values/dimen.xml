@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dialog_height">296dp</dimen>
+    <dimen name="dialog_width">451dp</dimen>
+
+    <dimen name="bounding_box_corner_radius">12dp</dimen>
+    <dimen name="barcode_reticle_stroke_width">2dp</dimen>
+    <dimen name="barcode_reticle_strokesucceded_width">5dp</dimen>
+    <dimen name="barcode_reticle_corner_radius">8dp</dimen>
+    <dimen name="barcode_reticle_ripple_size_offset">40dp</dimen>
+    <dimen name="barcode_reticle_ripple_stroke_width">4dp</dimen>
+    <dimen name="check_fields_margin">16dp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+
+
+</resources>

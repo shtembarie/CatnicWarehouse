@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_bg"
+    android:paddingVertical="36dp"
+    android:padding="24dp">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="40dp"
+        android:layout_height="6dp"
+        android:background="@drawable/rounded_grey"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/barcode_image"
+        android:layout_width="370dp"
+        android:layout_height="120dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/infodefective"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintBottom_toTopOf="@+id/title_popup_finalize" />
+
+    <TextView
+        android:id="@+id/title_popup_finalize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="2.7sp"
+        android:text="@string/what_is_a_defective_item"
+        android:textColor="@color/dark_grey"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode_image" />
+
+    <TextView
+        android:id="@+id/description_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="left"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/refers_to_any_unit_that_does_not_meet_the_established_quality_standards_or_has_faults_in_functionality_packaging_or_appearance_please_record_the_quantity_of_defective_items_in_this_section_to_ensure_proper_quality_control_and_to_streamline_the_return_or_repair_process_for_these_items_this_assists_in_maintaining_the_integrity_of_the_inventory_and_ensures_that_only_products_in_perfect_condition_are_offered_to_customers"
+        android:textColor="@color/gray_text_color"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_popup_finalize" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/description_popup">
+
+
+        <TextView
+            android:id="@+id/backButton"
+            style="@style/TransparentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="@string/back_"
+            android:textColor="@color/blood_orange" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

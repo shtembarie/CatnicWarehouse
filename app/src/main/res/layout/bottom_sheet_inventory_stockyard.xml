@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="16dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:background="@drawable/rounded_grey" />
+
+    <ImageView
+        android:id="@+id/barcode_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/stockyard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/start_inventory"
+        android:fontFamily="@font/robotomedium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:layout_marginBottom="8dp"
+        android:gravity="left"
+        android:text="@string/begin_inventory"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:textColor="@color/gray_text_color"
+        android:textSize="16sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/buttonContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        style="@style/BaseButton"
+        android:paddingVertical="12dp"
+        android:textAllCaps="true"
+        android:layout_marginHorizontal="4dp"
+        android:text="@string/scan_stockyard" />
+    <TextView
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="4dp"
+        android:background="@color/transparent"
+        android:text="@string/back"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:paddingVertical="12dp"
+        style="@style/TransparentButton"
+        android:textColor="@color/blood_orange"/>
+
+
+
+
+</LinearLayout>

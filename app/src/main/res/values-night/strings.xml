@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_scanning_articles">Start Scanning Articles</string>
+    <string name="start_scanning_stockyards">Start Scanning Stockyards</string>
+    <string name="deliveries">Deliveries</string>
+    <string name="select_stockyard">Select Stockyard</string>
+</resources>

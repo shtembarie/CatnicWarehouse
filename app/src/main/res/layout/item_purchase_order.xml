@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/article_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ic_purchase_order"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/main_background"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_product_quantity" />
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_state"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="-2dp"
+        android:elevation="1dp"
+        android:src="@color/blood_orange"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_purchase_order"
+        app:layout_constraintEnd_toEndOf="@+id/ic_purchase_order" />
+
+    <TextView
+        android:id="@+id/title_purchase_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:textColor="@color/item_supplier_title_color"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/ic_purchase_order"
+        app:layout_constraintTop_toTopOf="@+id/ic_purchase_order"
+        tools:text="Artikel-Nr. 6004" />
+
+    <TextView
+        android:id="@+id/position_purchase_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:textColor="@color/item_text_color"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/title_purchase_order"
+        app:layout_constraintTop_toBottomOf="@+id/title_purchase_order"
+        tools:text="Orderd -  20" />
+
+    <TextView
+        android:id="@+id/delivred_state_purchase_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:textColor="@color/item_text_color"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/position_purchase_order"
+        app:layout_constraintTop_toBottomOf="@+id/position_purchase_order"
+        tools:text="Delivered - 15" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+
+        android:layout_marginTop="16dp"
+        android:background="@color/color_divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/delivred_state_purchase_order"
+        app:layout_constraintTop_toBottomOf="@+id/delivred_state_purchase_order" />
+
+    <ImageView
+        android:id="@+id/ic_arrow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="0.1"
+        android:contentDescription="@null"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_to_right_arrow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

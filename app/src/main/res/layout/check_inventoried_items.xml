@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/check_inventoriedItems">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:padding="0sp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_inventory_view"
+            android:layout_width="168dp"
+            android:layout_height="112dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_with_border_orange_fill"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="108dp"
+                android:layout_height="68dp"
+                android:maxLines="2"
+                android:padding="16dp"
+                android:textSize="13sp"
+                android:text="@string/current_inventory"
+                android:textColor="@color/inventory_calc_30pr"
+                app:layout_constraintBottom_toTopOf="@+id/tv_inventoried"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="58dp"
+                android:layout_height="61dp"
+                android:padding="8dp"
+                android:src="@drawable/info_inventoried"
+                app:layout_constraintBottom_toTopOf="@+id/tv_pce"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_inventoried"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:text="@string/_0"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pce"
+                android:layout_width="70dp"
+                android:layout_height="49dp"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:paddingStart="@dimen/_16sdp"
+                android:text="@string/pce"
+                android:textColor="@color/inventory_calc_30pr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.979"
+                app:layout_constraintStart_toEndOf="@+id/tv_inventoried" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_inventory_views"
+            android:layout_width="168dp"
+            android:layout_height="112dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_with_border_white_fill"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" >
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="108dp"
+                android:layout_height="68dp"
+                android:maxLines="2"
+                android:padding="16dp"
+                android:textSize="13sp"
+                android:text="@string/previous_inventory"
+                android:textColor="@color/inventory_calc_30pr"
+                app:layout_constraintBottom_toTopOf="@+id/tv_inventoried2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_icon2"
+                android:layout_width="58dp"
+                android:layout_height="61dp"
+                android:padding="8dp"
+                android:src="@drawable/prev_inventory"
+                app:layout_constraintBottom_toTopOf="@+id/tv_pce2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_title2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_inventoried2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:padding="16dp"
+                android:paddingStart="16dp"
+                android:textSize="14sp"
+                android:text="@string/_200"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pce2"
+                android:layout_width="70dp"
+                android:layout_height="49dp"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:paddingStart="@dimen/_16sdp"
+                android:text="@string/pce"
+                android:textColor="@color/inventory_calc_30pr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.979"
+                app:layout_constraintStart_toEndOf="@+id/tv_inventoried2" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

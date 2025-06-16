@@ -1,0 +1,3 @@
+package com.example.shared.networking.network.packing.model.shippingContainer.shippingContainerTypes
+
+class ShippingContainerTypeResponseModel : ArrayList<ShippingContainerTypeResponseModelItem>()

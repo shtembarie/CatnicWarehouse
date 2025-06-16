@@ -1,0 +1,43 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="5dp"
+            android:layout_marginVertical="@dimen/_12sdp"
+             />
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/scan_info_complete" />
+
+
+
+        <TextView
+            android:id="@+id/buttonContinue"
+            style="@style/TransparentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="30dp"
+            android:paddingVertical="12dp"
+            android:text="@string/cancel"
+            android:textAllCaps="true" />
+
+
+    </LinearLayout>
+</ScrollView>

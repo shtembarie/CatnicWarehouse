@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="transparent_color">#00FFFFFF</color>
+    <color name="barcode_reticle_stroke">#FFF</color>
+    <color name="barcode_reticle_background">#99000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="suc_scing_color">#70b603</color>
+    <color name="grey_content">#BEC2C3</color>
+
+</resources>

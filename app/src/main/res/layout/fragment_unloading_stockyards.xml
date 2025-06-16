@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".incoming.deliveries.presentation.fragment.DeliveryFragment">
+
+    <include
+        android:id="@+id/delivery_header"
+        layout="@layout/header_view_section_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stockyards_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scanStockyardsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_header"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_delivery" />
+
+    <LinearLayout
+        android:id="@+id/scanStockyardsButton"
+        style="@style/BaseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/continueWithoutButton">
+
+        <TextView
+            android:id="@+id/scanStockyardsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:text="@string/scanStockyards"
+            android:textAllCaps="true"
+            style="@style/BaseButton"
+            app:drawableLeftCompat="@drawable/barcode"
+            android:drawablePadding="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/buttonBack" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/continueWithoutButton"
+        style="@style/TransparentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:textAllCaps="true"
+        android:text="@string/continue_without"
+        android:textColor="@color/blood_orange"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

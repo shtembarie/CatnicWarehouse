@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/correctingstock_view_navigation"
+    app:startDestination="@id/warehouseStockyardsFragments">
+
+    <fragment
+        android:id="@+id/warehouseStockyardsFragments"
+        android:name="com.example.catnicwarehouse.CorrectingStock.stockyards.presentation.fragments.WarehouseStockyardsFragments"
+        android:label="fragment_warehouses_stockyards"
+        tools:layout="@layout/fragment_warehouses_stockyards" >
+        <action
+            android:id="@+id/action_warehouseStockyardsFragments_to_articlesCorrectingStockFragment"
+            app:destination="@id/articlesCorrectingStockFragment">
+            <argument
+                android:name="stockyardId"
+                app:argType="integer"/>
+        </action>
+        <action
+            android:id="@+id/action_warehouseStockyardsFragments_to_scanDeviceInstructionsFragment2"
+            app:destination="@id/scanDeviceInstructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesCorrectingStockFragment"
+        android:name="com.example.catnicwarehouse.CorrectingStock.articles.presentation.fragments.ArticlesCorrectingStockFragment"
+        android:label="fragment_articles_correcting_stock"
+        tools:layout="@layout/fragment_articles_correcting_stock" >
+        <action
+            android:id="@+id/action_articlesCorrectingStockFragment_to_matchFoundCorrectiveStockFragment"
+            app:destination="@id/matchFoundCorrectiveStockFragment" >
+        </action>
+        <action
+            android:id="@+id/action_articlesCorrectingStockFragment_to_articleSelectionFragment4"
+            app:destination="@id/articleSelectionFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFoundCorrectiveStockFragment"
+        android:name="com.example.catnicwarehouse.CorrectingStock.MatchFoundArticle.presentation.fragments.MatchFoundCorrectiveStockFragment"
+        android:label="fragment_match_found_corrective_stock"
+        tools:layout="@layout/fragment_match_found_corrective_stock" >
+        <action
+            android:id="@+id/action_matchFoundCorrectiveStockFragment_to_itemAmountFragment"
+            app:destination="@id/itemAmountFragment">
+            <argument
+                android:name="amount"
+                app:argType="string"/>
+            <argument
+                android:name="unit"
+                app:argType="string"/>
+            <argument
+                android:name="itemType"
+                app:argType="string" />
+
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/itemAmountFragment"
+        android:name="com.example.catnicwarehouse.CorrectingStock.AmountFragment.presentation.fragment.ItemAmountFragment"
+        android:label="fragment_item_amount"
+        tools:layout="@layout/fragment_item_amount" >
+    </fragment>
+    <fragment
+        android:id="@+id/scanDeviceInstructionsFragment"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.ScanDeviceInstructionsFragment"
+        android:label="fragment_scan_device_instructions"
+        tools:layout="@layout/scan_device_info_layout">
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleSelectionFragment4"
+        android:name="com.example.catnicwarehouse.CorrectingStock.articles.presentation.fragments.ArticleSelectionFragment"
+        android:label="ArticleSelectionFragment" >
+        <action
+            android:id="@+id/action_articleSelectionFragment4_to_matchFoundCorrectiveStockFragment"
+            app:destination="@id/matchFoundCorrectiveStockFragment" />
+    </fragment>
+</navigation>

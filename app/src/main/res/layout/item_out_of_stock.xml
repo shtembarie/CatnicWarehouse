@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="16dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:background="@drawable/rounded_grey" />
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/item_out_of_stock_icon"/>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/item_out_of_stock"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/dark_grey_70"
+        android:text="@string/the_scanned_item_exists_in_the_system_but_there_are_currently_no_physical_units_available_in_the_warehouse"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="16sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="4dp"
+        android:background="@color/transparent"
+        android:text="@string/ok_got_it"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:paddingVertical="12dp"
+        style="@style/TransparentButton"
+        android:textColor="@color/blood_orange"/>
+
+</LinearLayout>

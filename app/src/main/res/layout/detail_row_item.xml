@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+
+    <!-- Icon on the left -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ic_supplier"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        app:cardBackgroundColor="@color/main_background"
+        app:cardCornerRadius="30dp"
+        android:layout_marginVertical="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hash_img"
+        android:padding="10dp"
+        />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Space between icon and text -->
+    <View
+        android:layout_width="8dp"
+        android:layout_height="0dp" />
+
+    <!-- Text container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Left text -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/leftLayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="5.3sp"
+                android:textColor="@color/dark_grey"
+                android:maxLines="1"
+                android:textStyle="normal"
+                tools:text="Milton Aeron"
+                />
+
+            <TextView
+                android:id="@+id/subtitle_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="9.3sp"
+                android:textColor="@color/dark_grey_48"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                tools:text="Milton Aeron"
+                />
+        </LinearLayout>
+
+        <!-- Right text -->
+        <LinearLayout
+            android:id="@+id/rightLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:paddingStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="5.3sp"
+                android:textColor="@color/dark_grey"
+                android:maxLines="1"
+                android:textStyle="normal"
+                tools:text="Milton Aeron"
+                />
+
+            <TextView
+                android:id="@+id/subtitle_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="9.3sp"
+                android:textColor="@color/dark_grey_48"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                tools:text="Milton Aeron"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color (light orange) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#fdf6ed"/> <!-- Light orange background -->
+        </shape>
+    </item>
+
+    <!-- Border color (orange) -->
+    <item
+        android:right="1dp"
+        android:left="1dp"
+        android:top="1dp"
+        android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/blood_orange"/> <!-- Orange border -->
+            <corners android:radius="8dp"/> <!-- Rounded corners -->
+        </shape>
+    </item>
+
+</layer-list>

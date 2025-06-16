@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_container"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:padding="8dp" />
+
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_the_type_of_shipping_container_you_want_to_add_to_this_packing_list"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/dark_grey_50"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/containerTypeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp" />
+
+    <TextView
+        android:id="@+id/buttonContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        style="@style/BaseButton"
+        android:paddingVertical="12dp"
+        android:textAllCaps="true"
+        android:layout_marginHorizontal="4dp"
+        android:text="@string/create" />
+</LinearLayout>

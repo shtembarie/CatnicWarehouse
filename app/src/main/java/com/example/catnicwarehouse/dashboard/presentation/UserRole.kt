@@ -1,0 +1,23 @@
+package com.example.catnicwarehouse.dashboard.presentation
+
+import com.example.catnicwarehouse.shared.presentation.enums.ModuleType
+
+enum class AccessRole(val module: ModuleType) {
+    APP_DELIVERY_COMMAND_ALL(ModuleType.INCOMING),
+    APP_DELIVERY_QUERY_ALL(ModuleType.INCOMING),
+
+    APP_MOVEMENTS_COMMAND_ALL(ModuleType.MOVEMENTS),
+    APP_MOVEMENTS_QUERY_ALL(ModuleType.MOVEMENTS),
+
+    APP_PACKING_COMMAND_ALL(ModuleType.PACKING_1),
+    APP_PACKING_QUERY_ALL(ModuleType.PACKING_1),
+
+    APP_INVENTORY_COMMAND_ALL(ModuleType.INVENTORY),
+    APP_INVENTORY_QUERY_ALL(ModuleType.INVENTORY),
+
+    APP_DEFECTIVE_ARTICLES_COMMAND_ALL(ModuleType.DEFECTIVE_ITEMS),
+    APP_DEFECTIVE_ARTICLES_QUERY_ALL(ModuleType.DEFECTIVE_ITEMS),
+
+    APP_CORRECTIVE_ARTICLES_COMMAND_ALL(ModuleType.CORRECTIVE_STOCK),
+    APP_CORRECTIVE_ARTICLES_QUERY_ALL(ModuleType.CORRECTIVE_STOCK)
+}

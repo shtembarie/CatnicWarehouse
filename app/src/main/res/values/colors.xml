@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#ff5000</color>
+    <color name="purple_700">#38536e</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- splash -->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="background_splash">#38536e</color>
+    <color name="text_splash">#707070</color>
+    <color name="indice_progress_background">#ff5000</color>
+    <color name="progress_background">#707070</color>
+    <color name="text_loading_color">#deffffff</color>
+
+    <color name="main_background">#f5f5f5</color>
+    <color name="text_login">@color/background_splash</color>
+    <color name="text_hint_color">#99000000</color>
+    <color name="second_text_hint_color">#bc000000</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#1f000000</color>
+    <color name="blood_orange">#ff5000</color>
+    <color name="bottom_navigation_color">#38536e</color>
+    <color name="item_text_color">#99000000</color>
+    <color name="item_supplier_title_color">#de000000</color>
+    <color name="color_divider">#1f000000</color>
+    <color name="gray_text_color">#4f5b62</color>
+    <color name="light_gray_text_color">#9c9c9c</color>
+    <color name="grey_400">#c5c5c5</color>
+    <color name="dark_orange">#ca3600</color>
+    <color name="yellow_color">#F59123</color>
+    <color name="orange_color">#f59a23</color>
+    <color name="yellow">#FF0</color>
+    <color name="red">#d4021d</color>
+    <color name="grey">#e2e3e4</color>
+    <color name="very_light_grey">#f5f5f5</color>
+
+    <color name="dark_grey_70">#b3313131</color>
+    <color name="dark_grey_48">#7A313131</color>
+    <color name="dark_grey">#313131</color>
+    <color name="blue">#008df0</color>
+    <color name="dark_grey_50">#80313131</color>
+    <color name="amount_item">#38536e</color>
+    <color name="semi_transparent">#80000000</color>
+    <color name="green_text">#70b603</color>
+    <color name="disabled_button_grey">#1D1B201F</color>
+    <color name="disabled_button_text_color">#1D1B20</color>
+
+
+
+    <color name="progress_bar_panel">#8CDCD0C4</color>
+    <color name="progress_bar_circle">#F59123</color>
+    <color name="positive_progress_color">#67BC00</color>
+
+<!--    Inventory  -->
+    <color name="inventory_calc">#3C3C43</color>
+    <color name="inventory_calc_30pr">#3C3C434D</color>
+    <color name="holo_blue">#2195F2</color>
+
+    <color name="number_color">#BEC2C3</color>
+
+    <!-- Number Calculatier Background -->
+    <color name="holo_orange">#FE9700</color>
+    <color name="holo_orange_fill">#FEF5EB</color>
+
+    <!-- Code Found Match Color  -->
+    <color name="light_green">#70B603</color>
+    <color name="light_grey">#F2F3F3</color>
+
+    <color name="label_medium">#49454F</color>
+    <color name="syslightonsurface">#1D1B20</color>
+    <color name="pinkonrv">#FFF6EC</color>
+    <color name="redinv">#FF3355</color>
+    <color name="selected_row_color">#FFF5E5</color>
+
+</resources>

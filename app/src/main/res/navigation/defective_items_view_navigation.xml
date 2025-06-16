@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/defective_items_view_navigation"
+    app:startDestination="@id/defectiveItemsFragment">
+
+    <fragment
+        android:id="@+id/defectiveItemsFragment"
+        android:name="com.example.catnicwarehouse.defectiveItems.stockyards.presentation.fragments.DefectiveItemsFragment"
+        android:label="fragment_defective_items"
+        tools:layout="@layout/fragment_defective_items" >
+        <action
+            android:id="@+id/action_defectiveItemsFragment_to_matchFoundDefectiveItemsFragment"
+            app:destination="@id/matchFoundDefectiveItemsFragment" >
+
+            <argument
+                android:name="warehouseStockYardId"
+                app:argType="integer"/>
+        </action>
+        <action
+            android:id="@+id/action_defectiveItemsFragment_to_articleSelectionFragment42"
+            app:destination="@id/articleSelectionFragment4" />
+        <action
+            android:id="@+id/action_defectiveItemsFragment_to_stockyardSelectionFragment"
+            app:destination="@id/stockyardSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFoundDefectiveItemsFragment"
+        android:name="com.example.catnicwarehouse.defectiveItems.matchFoundFragment.presentation.fragment.MatchFoundDefectiveItemsFragment"
+        android:label="fragment_match_found_defective_items"
+        tools:layout="@layout/fragment_match_found_defective_items" >
+        <action
+            android:id="@+id/action_matchFoundDefectiveItemsFragment_to_defectiveItemsAmountFragment"
+            app:destination="@id/defectiveItemsAmountFragment" />
+        <action
+            android:id="@+id/action_matchFoundDefectiveItemsFragment_to_commentDefectiveItemsFragment"
+            app:destination="@id/commentDefectiveItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleSelectionFragment4"
+        android:name="com.example.catnicwarehouse.defectiveItems.matchFoundFragment.presentation.fragment.MatchFoundDefectiveItemsFragment"
+        android:label="ArticleSelectionFragment" >
+
+        <action
+            android:id="@+id/action_articleSelectionFragment4_to_matchFoundDefectiveItemsFragment2"
+            app:destination="@id/matchFoundDefectiveItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/defectiveItemsAmountFragment"
+        android:name="com.example.catnicwarehouse.defectiveItems.amountFragment.presentation.fragment.DefectiveItemsAmountFragment"
+        android:label="fragment_defective_items_amount"
+        tools:layout="@layout/fragment_defective_items_amount" />
+    <fragment
+        android:id="@+id/commentDefectiveItemsFragment"
+        android:name="com.example.catnicwarehouse.defectiveItems.comment.presentation.fragment.CommentDefectiveItemsFragment"
+        android:label="fragment_comment_defective_items"
+        tools:layout="@layout/fragment_comment_defective_items" />
+    <fragment
+        android:id="@+id/stockyardSelectionFragment"
+        android:name="com.example.catnicwarehouse.defectiveItems.stockyards.presentation.fragments.StockyardSelectionFragment"
+        android:label="fragment_stockyard_selection"
+        tools:layout="@layout/fragment_stockyard_selection" >
+        <action
+            android:id="@+id/action_stockyardSelectionFragment_to_matchFoundDefectiveItemsFragment"
+            app:destination="@id/matchFoundDefectiveItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanDeviceInstructionsFragment"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.ScanDeviceInstructionsFragment"
+        android:label="fragment_scan_device_instructions"
+        tools:layout="@layout/scan_device_info_layout">
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+    </fragment>
+</navigation>

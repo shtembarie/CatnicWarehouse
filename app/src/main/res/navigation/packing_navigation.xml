@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/packing_navigation"
+    app:startDestination="@id/packingListFragment">
+
+    <fragment
+        android:id="@+id/packingListFragment"
+        android:name="com.example.catnicwarehouse.packing.packingList.presentation.fragment.PackingListFragment"
+        android:label="PackingListFragment">
+        <argument
+            android:name="isForRelatedPackingList"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_packingListFragment_to_packingItemsFragment"
+            app:destination="@id/packingItemsFragment">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/packingItemsFragment"
+        android:name="com.example.catnicwarehouse.packing.packingItem.presentation.fragment.PackingItemsFragment"
+        android:label="PackingItemsFragment">
+        <argument
+            android:name="packingId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="isForRelatedPackingList"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_packingItemsFragment_to_finalisePackingFragment"
+            app:destination="@id/finaliseParentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalisePackingFragment"
+        android:name="com.example.catnicwarehouse.packing.finalisePackingList.presentation.fragment.FinalisePackingFragment"
+        android:label="FinalisePackingFragment" >
+
+        <argument
+            android:name="packingId"
+            android:defaultValue=""
+            app:argType="string" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/matchFoundFragment2"
+        android:name="com.example.catnicwarehouse.packing.matchFound.presentation.fragment.PackingArticlesFragment"
+        android:label="MatchFoundFragment" >
+
+        <action
+            android:id="@+id/action_matchFoundFragment2_to_addPackingItemsFragment"
+            app:destination="@id/addPackingItemsFragment" />
+        <action
+            android:id="@+id/action_matchFoundFragment2_to_shippingContainerFragment"
+            app:destination="@id/shippingContainerFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/articleSelectionFragment2"
+        android:name="com.example.catnicwarehouse.packing.finalisePackingList.presentation.fragment.ArticleSelectionFragment"
+        android:label="ArticleSelectionFragment" >
+        <argument
+            android:name="packingId"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_articleSelectionFragment2_to_matchFoundFragment2"
+            app:destination="@id/matchFoundFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/availableStockyardsFragment"
+        android:name="com.example.catnicwarehouse.packing.stockyards.presentation.fragment.AvailableStockyardsFragment"
+        android:label="fragment_available_stockyards"
+        tools:layout="@layout/fragment_available_stockyards" >
+        <action
+            android:id="@+id/action_availableStockyardsFragment_to_stockyardTreeFragment3"
+            app:destination="@id/stockyardTreeFragment3" />
+        <action
+            android:id="@+id/action_availableStockyardsFragment_to_amountFragment2"
+            app:destination="@id/amountFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanDeviceInstructionsFragment"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.ScanDeviceInstructionsFragment"
+        android:label="fragment_scan_device_instructions"
+        tools:layout="@layout/scan_device_info_layout">
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/amountFragment2"
+        android:name="com.example.catnicwarehouse.packing.amount.presentation.fragment.AmountFragment"
+        android:label="AmountFragment" >
+        <argument
+            android:name="isUpdatingAmount"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/dropzoneFragment"
+        android:name="com.example.catnicwarehouse.packing.finalisePackingList.presentation.fragment.DropzoneFragment"
+        android:label="DropzoneFragment" />
+    <fragment
+        android:id="@+id/stockyardTreeFragment3"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.StockyardTreeFragment"
+        android:label="fragment_stockyard_tree"
+        tools:layout="@layout/fragment_stockyard_tree" >
+        <argument
+            android:name="selectedStockyardId"
+            android:defaultValue="0"
+            app:argType="string" />
+
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+
+        <argument
+            android:name="moduleType"
+            android:defaultValue="Packing"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addPackingItemsFragment"
+        android:name="com.example.catnicwarehouse.packing.addPackingItems.presentation.fragment.AddPackingItemsFragment"
+        android:label="AddPackingItemsFragment" >
+        <action
+            android:id="@+id/action_addPackingItemsFragment_to_availableStockyardsFragment"
+            app:destination="@id/availableStockyardsFragment" />
+        <action
+            android:id="@+id/action_addPackingItemsFragment_to_amountFragment2"
+            app:destination="@id/amountFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/suppliersFragment"
+        android:name="com.example.catnicwarehouse.incoming.suppliers.presentation.fragment.SuppliersFragment"
+        android:label="fragment_shipping_container"
+        tools:layout="@layout/fragment_shipping_container" />
+    <fragment
+        android:id="@+id/shippingContainerFragment"
+        android:name="com.example.catnicwarehouse.packing.shippingContainer.presentation.fragment.ShippingContainerFragment"
+        android:label="ShippingContainerFragment" >
+        <action
+            android:id="@+id/action_shippingContainerFragment_to_amountFragment3"
+            app:destination="@id/amountFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/finaliseParentFragment"
+        android:name="com.example.catnicwarehouse.packing.finalisePackingList.presentation.fragment.FinaliseParentFragment"
+        android:label="FinaliseParentFragment" >
+        <argument
+            android:name="packingId"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_finalisePackingFragment_to_articleSelectionFragment2"
+            app:destination="@id/articleSelectionFragment2" />
+
+        <action
+            android:id="@+id/action_finalisePackingFragment_to_dropzoneFragment"
+            app:destination="@id/dropzoneFragment" />
+        <action
+            android:id="@+id/action_finalisePackingFragment_to_packingListFragment"
+            app:destination="@id/packingListFragment" >
+        </action>
+        <action
+            android:id="@+id/action_finalisePackingFragment_to_matchFoundFragment2"
+            app:destination="@id/matchFoundFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/amountFragment3"
+        android:name="com.example.catnicwarehouse.packing.shippingContainer.presentation.fragment.AmountFragment"
+        android:label="AmountFragment" >
+        <argument
+            android:name="selectedShippingContainer"
+            app:argType="com.example.shared.networking.network.packing.model.shippingContainer.getShippingContainers.Data" />
+
+        <action
+            android:id="@+id/action_amountFragment3_to_shippingContainerDetailsFragment"
+            app:destination="@id/shippingContainerDetailsFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/shippingContainerDetailsFragment"
+        android:name="com.example.catnicwarehouse.packing.shippingContainer.presentation.fragment.ShippingContainerDetailsFragment"
+        android:label="ShippingContainerDetailsFragment">
+        <argument
+            android:name="selectedShippingContainer"
+            app:argType="com.example.shared.networking.network.packing.model.shippingContainer.getShippingContainers.Data" />
+    </fragment>
+</navigation>

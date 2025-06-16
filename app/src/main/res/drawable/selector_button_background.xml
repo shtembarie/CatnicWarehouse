@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When selected (i.e., checked for a RadioButton) -->
+    <item android:drawable="@drawable/button_background_selected" android:state_selected="true"/>
+    <!-- When pressed -->
+    <item android:drawable="@drawable/button_background_pressed" android:state_pressed="true"/>
+    <!-- Default background -->
+    <item android:drawable="@drawable/button_background_normal"/>
+</selector>

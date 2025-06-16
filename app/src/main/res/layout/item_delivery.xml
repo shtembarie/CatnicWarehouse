@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/delivery_item_container"
+    android:paddingTop="8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ic_delivey"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/main_background"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconBadge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_delivery" />
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_state"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:elevation="1dp"
+        android:layout_marginEnd="-2dp"
+        android:src="@color/blood_orange"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_delivey"
+        app:layout_constraintEnd_toEndOf="@+id/ic_delivey" />
+
+    <TextView
+        android:id="@+id/delivry_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:textColor="@color/item_supplier_title_color"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toTopOf="@id/supplier_txt"
+        app:layout_constraintEnd_toStartOf="@+id/article_qty"
+        app:layout_constraintStart_toEndOf="@+id/ic_delivey"
+        app:layout_constraintTop_toTopOf="@+id/ic_delivey"
+        tools:text="LE2022-01-01478" />
+
+    <TextView
+        android:id="@+id/supplier_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:textColor="@color/item_text_color"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/supplier_date"
+        app:layout_constraintStart_toStartOf="@+id/delivry_id"
+        tools:text="Supplier A" />
+
+    <TextView
+        android:id="@+id/supplier_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:textColor="@color/item_text_color"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="@+id/supplier_txt"
+        tools:text="08.06.2022 at 14:00" />
+
+    <TextView
+        android:id="@+id/article_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="5.3sp"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_arrow"
+        app:layout_constraintEnd_toStartOf="@+id/ic_arrow"
+        app:layout_constraintTop_toTopOf="@+id/ic_arrow"
+        tools:text="10" />
+
+    <ImageView
+        android:id="@+id/ic_arrow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="0.1"
+        android:padding="@dimen/_10sdp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_to_right_arrow" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/color_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

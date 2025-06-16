@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inventory_view_navigation"
+    app:startDestination="@id/inventoryFragment">
+
+
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.example.catnicwarehouse.inventoryNew.stockyards.presentation.fragment.StockyardsFragment"
+        android:label="inventory_fragments"
+        tools:layout="@layout/fragment_inventory">
+
+        <action
+            android:id="@+id/action_inventoryFragment_to_stockyardTreeFragment3"
+            app:destination="@id/stockyardTreeFragment3" />
+        <action
+            android:id="@+id/action_inventoryFragment_to_articlesFragment2"
+            app:destination="@id/articlesFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stockyardTreeFragment3"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.StockyardTreeFragment"
+        android:label="fragment_stockyard_tree"
+        tools:layout="@layout/fragment_stockyard_tree">
+        <argument
+            android:name="selectedStockyardId"
+            android:defaultValue="0"
+            app:argType="string" />
+
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+
+        <argument
+            android:name="moduleType"
+            android:defaultValue="Packing"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment2"
+        android:name="com.example.catnicwarehouse.inventoryNew.articles.presentation.fragment.ArticlesFragment"
+        android:label="fragment_articles2"
+        tools:layout="@layout/fragment_articles2" >
+        <action
+            android:id="@+id/action_articlesFragment2_to_articleSelectionFragment5"
+            app:destination="@id/articleSelectionFragment5" />
+        <action
+            android:id="@+id/action_articlesFragment2_to_matchFragment"
+            app:destination="@id/matchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleSelectionFragment5"
+        android:name="com.example.catnicwarehouse.inventoryNew.articles.presentation.fragment.ArticleSelectionFragment"
+        android:label="ArticleSelectionFragment" >
+        <action
+            android:id="@+id/action_articleSelectionFragment5_to_matchFragment"
+            app:destination="@id/matchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.example.catnicwarehouse.inventoryNew.matchFound.presentation.fragment.MatchFragment"
+        android:label="MatchFragment" >
+        <action
+            android:id="@+id/action_matchFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+        <action
+            android:id="@+id/action_matchFragment_to_deliveryFragment2"
+            app:destination="@id/amountFragment" />
+        <action
+            android:id="@+id/action_matchFragment_to_articlesFragment2"
+            app:destination="@id/articlesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.catnicwarehouse.inventoryNew.comment.presentation.fragment.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment2" />
+    <fragment
+        android:id="@+id/amountFragment"
+        android:name="com.example.catnicwarehouse.inventoryNew.amount.presentation.fragment.AmountFragment"
+        android:label="fragment_amount4"
+        tools:layout="@layout/fragment_amount4" />
+</navigation>

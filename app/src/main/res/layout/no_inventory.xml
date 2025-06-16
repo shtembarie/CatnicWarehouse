@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_bg"
+    android:id="@+id/no_stockyards"
+    android:paddingVertical="24dp">
+
+    <ImageView
+        android:id="@+id/barcode_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/no_inventory"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="2.7sp"
+        android:text="@string/no_inventorys"
+        android:textColor="@color/dark_grey"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode_image" />
+
+    <TextView
+        android:id="@+id/description_popup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/inventoried_items_scan"
+        android:textColor="@color/gray_text_color"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_popup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

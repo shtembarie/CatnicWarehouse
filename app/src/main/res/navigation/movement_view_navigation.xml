@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movement_view_navigation"
+    app:startDestination="@id/movementsListFragment">
+
+    <fragment
+        android:id="@+id/movementsListFragment"
+        android:name="com.example.catnicwarehouse.movement.movementList.presentation.fragment.MovementsListFragment"
+        android:label="fragment_movements_list"
+        tools:layout="@layout/fragment_movements_list" >
+
+
+        <action
+            android:id="@+id/action_movementsListFragment_to_warehouseStockyardsFragment"
+            app:destination="@id/warehouseStockyardsFragment" />
+        <action
+            android:id="@+id/action_movementsListFragment_to_movementArticlesFragment"
+            app:destination="@id/movementArticlesFragment" />
+        <action
+            android:id="@+id/action_movementsListFragment_to_matchFoundFragment3"
+            app:destination="@id/matchFoundFragment3" />
+        <action
+            android:id="@+id/action_movementsListFragment_to_articleSelectionFragment"
+            app:destination="@id/articleSelectionFragment" />
+        <action
+            android:id="@+id/action_movementsListFragment_to_movementSelectionFragment"
+            app:destination="@id/movementSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/warehouseStockyardsFragment"
+        android:name="com.example.catnicwarehouse.movement.stockyards.presentation.fragment.WarehouseStockyardsFragment"
+        android:label="WarehouseStockyardsFragment" >
+        <action
+            android:id="@+id/action_warehouseStockyardsFragment_to_movementArticlesFragment"
+            app:destination="@id/movementArticlesFragment" />
+        <action
+            android:id="@+id/action_warehouseStockyardsFragment_to_stockyardTreeFragment2"
+            app:destination="@id/stockyardTreeFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanDeviceInstructionsFragment"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.ScanDeviceInstructionsFragment"
+        android:label="fragment_scan_device_instructions"
+        tools:layout="@layout/scan_device_info_layout">
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/movementArticlesFragment"
+        android:name="com.example.catnicwarehouse.movement.articles.presentation.fragment.MovementArticlesFragment"
+        android:label="MovementArticlesFragment" >
+        <action
+            android:id="@+id/action_movementArticlesFragment_to_matchFoundFragment3"
+            app:destination="@id/matchFoundFragment3" />
+        <action
+            android:id="@+id/action_movementArticlesFragment_to_articleSelectionFragment"
+            app:destination="@id/articleSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFoundFragment3"
+        android:name="com.example.catnicwarehouse.movement.matchFound.presentation.fragment.FragmentMatchFound"
+        android:label="MatchFoundFragment" >
+        <action
+            android:id="@+id/action_matchFoundFragment3_to_amountFragment"
+            app:destination="@id/amountFragment" />
+        <action
+            android:id="@+id/action_matchFoundFragment3_to_movementsListFragment"
+            app:destination="@id/movementsListFragment" />
+        <action
+            android:id="@+id/action_matchFoundFragment3_to_movementSummaryFragment"
+            app:destination="@id/movementSummaryFragment" />
+        <action
+            android:id="@+id/action_matchFoundFragment3_to_stockyardTreeFragment2"
+            app:destination="@id/stockyardTreeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/amountFragment"
+        android:name="com.example.catnicwarehouse.movement.amount.presentation.AmountFragment"
+        android:label="AmountFragment" />
+    <fragment
+        android:id="@+id/movementSummaryFragment"
+        android:name="com.example.catnicwarehouse.movement.summary.presentation.fragment.MovementSummaryFragment"
+        android:label="MovementSummaryFragment" />
+    <fragment
+        android:id="@+id/articleSelectionFragment"
+        android:name="com.example.catnicwarehouse.movement.articles.presentation.fragment.ArticleSelectionFragment"
+        android:label="ArticleSelectionFragment" >
+        <action
+            android:id="@+id/action_articleSelectionFragment_to_matchFoundFragment3"
+            app:destination="@id/matchFoundFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/movementSelectionFragment"
+        android:name="com.example.catnicwarehouse.movement.movementList.presentation.fragment.MovementSelectionFragment"
+        android:label="MovementSelectionFragment" >
+        <action
+            android:id="@+id/action_movementSelectionFragment_to_matchFoundFragment3"
+            app:destination="@id/matchFoundFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockyardTreeFragment2"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.StockyardTreeFragment"
+        android:label="fragment_stockyard_tree"
+        tools:layout="@layout/fragment_stockyard_tree" >
+
+        <argument
+            android:name="selectedStockyardId"
+            android:defaultValue="0"
+            app:argType="string" />
+
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+
+        <argument
+            android:name="moduleType"
+            android:defaultValue="Movements"
+            app:argType="string" />
+
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.catnicwarehouse.dashboard.presentation.DashBoardFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.catnicwarehouse.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.catnicwarehouse.main.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/checksArticlesListFragment"
+        android:name="com.example.catnicwarehouse.checks.checkArticleList.presentation.fragment.ChecksArticlesListFragment"
+        android:label="ChecksArticlesListFragment"
+        tools:layout="@layout/fragment_checks"/>
+
+    <fragment
+        android:id="@+id/checksStockyardListFragment"
+        android:name="com.example.catnicwarehouse.checks.checkStockyardList.presentation.fragment.ChecksStockyardListFragment"
+        android:label="ChecksStockyardListFragment"
+        tools:layout="@layout/fragment_checks_stockyard_list"/>
+    <fragment
+        android:id="@+id/checkMatchFoundFragment"
+        android:name="com.example.catnicwarehouse.checks.matchFound.presentation.fragment.CheckMatchFoundFragment"
+        android:label="CheckMatchFoundFragment" />
+    <fragment
+        android:id="@+id/scanDeviceInstructionsFragment"
+        android:name="com.example.catnicwarehouse.scan.presentation.fragment.ScanDeviceInstructionsFragment"
+        android:label="fragment_scan_device_instructions"
+        tools:layout="@layout/scan_device_info_layout">
+        <argument
+            android:name="scanType"
+            android:defaultValue="STOCKYARD"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

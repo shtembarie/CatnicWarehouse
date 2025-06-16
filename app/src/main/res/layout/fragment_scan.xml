@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/camera_layout"
+        layout="@layout/camera_preview_overlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/auto_scan_section"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/very_light_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_qr_code_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/scan_article_txt_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/scan_article"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+                app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
+            <TextView
+                android:id="@+id/article_number_txt_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/article_number"
+                android:textColor="@color/dark_grey_48"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/scan_article_txt_id"
+                app:layout_constraintTop_toBottomOf="@+id/scan_article_txt_id" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:background="@color/grey" />
+
+        <include
+            android:id="@+id/selectedAccountLayout"
+            layout="@layout/selected_account_row"
+            android:layout_width="match_parent"
+            android:layout_height="72dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="70dp"
+            android:background="@color/grey"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/incl_progress_panel"
+        layout="@layout/full_screen_progress_panel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

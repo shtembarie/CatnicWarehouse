@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ic_supplier"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="16dp"
+            app:cardBackgroundColor="@color/main_background"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/article_icon_img" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/textLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/qty"
+            app:layout_constraintStart_toEndOf="@+id/ic_supplier"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="5.3sp"
+                android:textColor="@color/label_medium"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:textStyle="normal"
+                tools:text="Location" />
+
+            <TextView
+                android:id="@+id/total_amount_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/robotoregular"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="9.3sp"
+                android:textSize="18sp"
+                android:textColor="@color/syslightonsurface"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/qty"
+                app:layout_constraintStart_toStartOf="@+id/title_id"
+                app:layout_constraintTop_toBottomOf="@+id/title_id"
+                tools:text="@string/total_articles" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_supplier" />
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="9.3sp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/to_right_btn2"
+            app:layout_constraintEnd_toStartOf="@+id/to_right_btn2"
+            app:layout_constraintTop_toTopOf="@+id/to_right_btn2"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/to_right_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="12345"
+            android:textColor="@color/purple_500"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
