@@ -33,7 +33,7 @@ The UI was implemented based on Figma designs and the app communicates with back
 ## Developer
 **Enoklit Shtembari**  
 Android Developer  
-[LinkedIn](https://www.linkedin.com/in/your-link) · [GitHub](https://github.com/your-github)
+[LinkedIn](https://www.linkedin.com/in/enoklit-shtembari-a44567225/) · [GitHub](https://github.com/shtembarie)
 
 ---
 
